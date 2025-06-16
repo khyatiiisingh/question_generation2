@@ -1,0 +1,11 @@
+faiss-cpu
+flask
+flask-cors
+python-dotenv
+sentence-transformers
+google-generativeai
+google-ai-generativelanguage
+numpy
+requests
+typing_extensions
+streamlit
