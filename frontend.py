@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-st.title("📘 Question Generator using Gemini")
+st.title("📘 Question Generator")
 
 # Load COs from course_outcomes.txt
 with open("course_outcomes.txt", "r", encoding="utf-8") as f:
