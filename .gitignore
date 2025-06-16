@@ -1,0 +1,6 @@
+chunks.npy
+embeddings.npy
+faiss_index.index
+__pycache__/
+*.pyc
+.env
