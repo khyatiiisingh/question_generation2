@@ -1,7 +1,13 @@
 import streamlit as st
 import requests
+import os
+from dotenv import load_dotenv
 
-st.title("📘 Question Generator using Gemini")
+# Load environment variables
+load_dotenv()
+API_URL = os.getenv("API_URL")
+
+st.title("📘 Question Generator ")
 
 # Load COs from course_outcomes.txt
 with open("course_outcomes.txt", "r", encoding="utf-8") as f:
@@ -36,7 +42,7 @@ if st.button("Generate Questions"):
                 files["case_material"] = (case_file.name, case_file.read(), "text/plain")
 
             try:
-                res = requests.post("http://localhost:5000/api/generate-questions", data=form_data, files=files)
+                res = requests.post(f"{API_URL}/api/generate-questions", data=form_data, files=files)
                 if res.status_code == 200:
                     result = res.json()
                     for item in result["questions"]:
