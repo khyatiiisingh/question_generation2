@@ -9,3 +9,4 @@ numpy
 requests
 typing_extensions
 streamlit
+gevent
